@@ -39,8 +39,8 @@ client.on("messageCreate", async (message) => {
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isButton()) {
         if (interaction.customId === "openTicket") {
-            const categoryId = "1155287966730694657"
-            const staffRoleId = "1155288536770162744"
+            const categoryId = "" //ID da categoria que serão criados os tickets.
+            const staffRoleId = "" //ID do cargo que irá permitir ao staff ver e mandar mensagem no canal.
             interaction.guild.channels.create({
                 type: Discord.TextChannel,
                 name: `ticket-${interaction.user.username}`,
